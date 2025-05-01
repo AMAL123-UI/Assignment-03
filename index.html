@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration & Preferences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User Registration & Preferences</h1>
+
+  <form action="#" method="post" autocomplete="on" target="_blank">
+    
+    <!-- 1. Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label>First Name:
+        <input type="text" name="firstName" autofocus>
+      </label>
+
+      <label>Last Name:
+        <input type="text" name="lastName" readonly value="Test">
+      </label>
+
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+
+      <label>Date of Birth:
+        <input type="date" name="dob" min="1980-01-01" max="2024-12-31">
+      </label>
+
+      <label>Favorite Color:
+        <input type="color" name="favColor">
+      </label>
+
+      <label>Upload Profile Picture:
+        <input type="file" name="profilePic">
+      </label>
+    </fieldset>
+
+    <!-- 2. Preferences -->
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <label>Favorite Web Language:</label>
+      <label><input type="radio" name="webLang" value="HTML"> HTML</label>
+      <label><input type="radio" name="webLang" value="CSS"> CSS</label>
+      <label><input type="radio" name="webLang" value="JavaScript"> JavaScript</label>
+
+      <label>Devices You Own:</label>
+      <label><input type="checkbox" name="deviceBike" value="Bike"> Bike</label>
+      <label><input type="checkbox" name="deviceCar" value="Car"> Car</label>
+      <label><input type="checkbox" name="deviceBoat" value="Boat"> Boat</label>
+
+      <label>Choose Your Car:</label>
+      <select name="cars" multiple size="4">
+        <option value="suzuki">Suzuki</option>
+        <option value="toyota">Toyota</option>
+        <option value="honda">Honda</option>
+        <option value="ford">Ford</option>
+      </select>
+
+      <label>Available Time:
+        <input type="time" name="availableTime">
+      </label>
+    </fieldset>
+
+    <!-- 3. Feedback & Settings -->
+    <fieldset>
+      <legend>Feedback & Settings</legend>
+
+      <label>Feedback:
+        <textarea name="feedback" rows="4" cols="40"></textarea>
+      </label>
+
+      <label>Satisfaction Level:
+        <input type="range" name="satisfaction" min="0" max="100" value="50" oninput="output.value = satisfaction.value">
+        <output name="output">50</output>
+      </label>
+
+      <label>Country Code (3 uppercase letters):
+        <input type="text" name="countryCode" pattern="[A-Z]{3}" title="Enter 3 uppercase letters">
+      </label>
+
+      <label>Age:
+        <input type="number" name="age" min="10" max="100">
+      </label>
+
+      <label>Select Month:
+        <input type="month" name="birthMonth">
+      </label>
+    </fieldset>
+
+    <!-- 4. Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="alert('Thank you for visiting!')">Click Me</button>
+
+  </form>
+
+</body>
+</html>
+
+
